@@ -1,0 +1,36 @@
+int binary(int a[],int n,int key)
+{
+
+    int mid;
+    int low=0;
+    int high=n-1;
+    while(low<=high)
+    {
+        mid =(low+high)/2;
+        if(key==a[mid])
+            return mid;
+        if(key<a[mid])
+             high=mid-1;
+
+        else
+            low=mid+1;
+
+    }
+    return -1;
+}
+
+int main()
+{
+    int i,a[10],key,n,m;
+    printf("Enter size of a list: ");
+    scanf("%d", &n);
+    printf("Enter elements\n");
+    for(i = 0; i < n; i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    printf("enter key");
+    scanf("%d",&key);
+    m=binary(a,n,key);
+    printf("element is at %d",m);
+}
