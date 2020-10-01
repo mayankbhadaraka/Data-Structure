@@ -34,7 +34,3 @@ int main()
     m=binary(a,n,key);
     printf("element is at %d",m);
 }
-        
-		
-		
-		
